@@ -1,0 +1,10 @@
+
+@import "../base/police";
+@import "../utils/var";
+
+
+#logo {
+    font-family: $police;
+    @include centerflex;
+}
+ 

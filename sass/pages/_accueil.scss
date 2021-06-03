@@ -1,0 +1,5 @@
+@import "../components/cadre";
+
+a {
+    @include cadre;
+}
