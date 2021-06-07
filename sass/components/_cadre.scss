@@ -3,5 +3,6 @@
     border: 2px solid black;
     border-radius: 1em;
     overflow: hidden;
-    @include centerflex($direction : column);      
+    @include centerflex($direction : column);  
+    margin: 1em;; 
 }

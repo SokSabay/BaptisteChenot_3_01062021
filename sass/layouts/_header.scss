@@ -5,6 +5,22 @@
 
 #logo {
     font-family: $police;
-    @include centerflex;
+}
+
+header {
+    display : grid;
+    grid-template-columns: repeat(3, 1fr);
+    #logo {
+        grid-column: 2 / 3;
+        grid-row: 1;
+        @include centerflex($direction : column);
+    }
+    .buttonback {
+        grid-column: 1 / 3;
+        grid-row: 1;
+        text-align: center;
+        
+        
+    }
 }
  
