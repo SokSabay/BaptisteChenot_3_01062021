@@ -1,0 +1,29 @@
+.container__allfood {
+    @include centerflex($direction : column);
+    border : 3px solid cadetblue;
+    
+
+}
+.container__food {
+    border: 2px solid gold;
+    @include centerflex($direction : column);
+    margin: 0;
+    width: 90%; 
+}
+
+.button {
+    border: 2px solid red;
+    @include centerflex($direction : row);
+    justify-content: space-between;
+    width: 90%;
+    margin : 1rem;
+    background: white;
+    border-radius: 1.5em;
+    padding: 0.4em;
+  
+}
+
+.button__info h2, 
+.button__info h3 {
+    margin: 0;
+}
