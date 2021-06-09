@@ -2,9 +2,12 @@
 
 footer {
     @include centerflex($direction : column);
+    align-items: flex-start;
     background : #353535;
+
     ul {
-        width: 100%;
+        
         list-style-type: none;
+
     }
 }

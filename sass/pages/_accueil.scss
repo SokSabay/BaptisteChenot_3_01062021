@@ -2,4 +2,24 @@
 
 .vignette {
     @include cadre;
+    img {
+       width: 100%;
+        height: 70%;
+        object-fit: cover;
+    }
 }
+
+
+.container__desc {
+    @include centerflex($direction : row); 
+    justify-content: space-around;
+    
+    height: 30%;
+    background: white;
+ 
+    h2, h3 {
+        margin : 0;
+    }
+    
+}
+
