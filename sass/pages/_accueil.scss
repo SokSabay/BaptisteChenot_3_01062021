@@ -1,5 +1,14 @@
-@import "../components/cadre";
 
+
+body {
+    margin: 0 auto;
+}
+
+/**************************************/
+/***************VIGNETTES**************/
+/**************************************/
+
+/*Création des vignettes de la page d'accueil*/
 .vignette {
     @include cadre;
     img {
@@ -9,17 +18,61 @@
     }
 }
 
-
+/*Mise en place du contenu text et icone des vignettes */
 .container__desc {
     @include centerflex($direction : row); 
-    justify-content: space-around;
+    justify-content: space-between;
     
     height: 30%;
     background: white;
+    padding-left: 1em;
+    padding-right: 2em;
  
     h2, h3 {
         margin : 0;
+       
     }
-    
 }
+
+
+/**************************************/
+/************LOCALISATION**************/
+/**************************************/
+.localisation {
+    background: #EAEAEA;
+    text-align: center;
+    padding: 0.1em;
+}
+
+
+/**************************************/
+/************EXPLORER******************/
+/**************************************/
+.explorer {
+    @include centerflex($direction : column);
+    justify-content: center;   
+    text-align: center;
+    background: #F6F6F6;
+    padding-bottom: 2em;
+}
+
+/*Ajout d'une marge à gauche pour les titres*/
+.tuto h1,
+.resto h1 {
+    padding-left: 0.8em;
+}
+
+/**************************************/
+/***************RESTO******************/
+/**************************************/
+.resto {
+    background: #F6F6F6;    
+}
+.containerbutton {
+    @include centerflex($direction : column);
+    justify-content: space-around;    
+}
+
+
+
 

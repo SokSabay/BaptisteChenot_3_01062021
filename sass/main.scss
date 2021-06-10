@@ -1,13 +1,12 @@
-@import "layouts/animation";
+@import "base/police";
+@import "utils/var";
+@import "components/cadre";
+@import "components/animation";
 @import "layouts/footer";
 @import "layouts/header";
-@import "layouts/main";
-@import "layouts/body";
-
-@import "base/police";
+@import "components/buttons";
 
 @import "pages/accueil"; 
+@import "pages/menu";
 
-@import "components/purplebutton";
-@import "components/tutobutton";
-@import "components/choicebutton"
+

@@ -2,5 +2,17 @@
 $primaryColor: #9356dc;
 $secondaryColor: #ff79da;
 $tertiaryColor: #99e2d0;
+$typoblanc: #ffffff;
 
 $police:'Shrikhand', cursive;
+
+/*Suppression du surlignage dans les liens*/
+a {
+    text-decoration: none;
+}
+
+/*typo en blanc*/
+
+li, button {
+    color  : $typoblanc;
+}

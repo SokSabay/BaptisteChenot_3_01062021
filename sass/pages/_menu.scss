@@ -1,0 +1,52 @@
+/**************************************/
+/**************MAIN********************/
+/**************************************/
+/*Ces classes concernent les pages menus à bouger au plus vite mec*/
+
+.backgroundimg {
+   height: 15rem;
+   overflow: hidden;
+   width: 100%;
+   img {
+       object-fit: cover;
+       width: 100%;
+   }
+}
+
+
+.mainbody {
+   @include centerflex($direction : column); 
+}
+
+
+.mainmenu { 
+   background: #f2f2f2;
+   @include centerflex($direction : column);
+   
+   border-radius: 2rem 2rem 0 0;
+   margin-top: -30px;
+   width: 100%;
+}
+.container__allfood {
+    
+      
+    @include centerflex($direction : column);
+    align-items: flex-start;    
+    width: 95%; 
+    .purplebutton {
+       align-self: center;
+       margin-top: 2em;
+       margin-bottom: 4em;
+    }
+}
+.container__food {
+   /*@include centerflex($direction : column);*/
+  
+   
+   width: 100%;
+   margin: 0;
+  
+  }
+
+
+

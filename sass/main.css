@@ -1,3 +1,18 @@
+@charset "UTF-8";
+/*font-family: 'Shrikhand', cursive;*/
+/*Suppression du surlignage dans les liens*/
+a {
+  text-decoration: none;
+}
+
+/*typo en blanc*/
+li, button {
+  color: #ffffff;
+}
+
+/**************************************/
+/**********ANIMATION-COEUR*************/
+/**************************************/
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,7 +37,6 @@ footer ul {
   list-style-type: none;
 }
 
-/*font-family: 'Shrikhand', cursive;*/
 #logo {
   font-family: "Shrikhand", cursive;
 }
@@ -36,78 +50,193 @@ header {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  position: relative;
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(71, 70, 70, 0.192);
+          box-shadow: 2px 2px 2px 2px rgba(71, 70, 70, 0.192);
 }
 
-header #logo {
+#logo {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
 }
 
 /**************************************/
-/**************MAIN********************/
+/**************BOUTON MENU*************/
 /**************************************/
-.container__allfood {
+/*bouton des choix dans la page de menu */
+.button {
+  border: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem auto;
+  background: white;
+  border-radius: 1.5em;
+  padding: 0.4em;
 }
 
-.mainmenu {
-  background: #f2f2f2;
-  border-radius: 2rem 2rem 0 0;
-  margin-top: -30px;
-  width: 100%;
+.button__info h2,
+.button__info h3 {
+  margin: 0;
 }
 
-.mainbody {
+/**************************************/
+/************BOUTONS VIOLET************/
+/**************************************/
+/*Création des boutons violets*/
+.purplebutton {
+  border-radius: 500px;
+  border: 0;
+  padding: 1em;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(#ff79da, #9356dc);
+}
+
+/**************************************/
+/**************BOUTONS TUTO************/
+/**************************************/
+/*Création des boutons de la page d'accueil*/
+.tutobouton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 90%;
+  max-width: 30em;
+  min-width: 20em;
+  height: 5em;
 }
 
-.container__food {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+.tutobouton .buttonborder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-width: 90%;
+  border-radius: 25px;
+  border: 0;
+  padding: 0.1em;
+  background: #F6F6F6;
+  margin-left: -20px;
 }
 
-.backgroundimg {
-  height: 15rem;
+.tutobouton .buttonborder .tuttoboutton__icon {
+  margin-left: 1.5em;
+}
+
+.tutobouton .buttonborder .tuttobouton__txt {
+  margin-right: 1.5em;
+}
+
+/*Cercle contenant le chiffre*/
+.tuttobouton__nmb {
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  padding: 0.5em;
+  border: 0;
+  background: #9356dc;
+  text-align: center;
+}
+
+body {
+  margin: 0 auto;
+}
+
+/**************************************/
+/***************VIGNETTES**************/
+/**************************************/
+/*Création des vignettes de la page d'accueil*/
+.vignette {
+  display: block;
+  border: 0;
+  -webkit-box-shadow: 10px 1px 12px rgba(194, 194, 194, 0.397);
+          box-shadow: 10px 1px 12px rgba(194, 194, 194, 0.397);
+  border-radius: 1em;
   overflow: hidden;
+  margin: 1em;
+  height: 16rem;
+}
+
+.vignette img {
   width: 100%;
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.backgroundimg img {
-  overflow: cover;
+/*Mise en place du contenu text et icone des vignettes */
+.container__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 30%;
+  background: white;
+  padding-left: 1em;
+  padding-right: 2em;
 }
 
+.container__desc h2, .container__desc h3 {
+  margin: 0;
+}
+
+/**************************************/
+/************LOCALISATION**************/
+/**************************************/
 .localisation {
   background: #EAEAEA;
   text-align: center;
+  padding: 0.1em;
 }
 
 /**************************************/
@@ -130,11 +259,15 @@ header #logo {
   justify-content: center;
   text-align: center;
   background: #F6F6F6;
+  padding-bottom: 2em;
 }
 
-/**************************************/
-/**************TUTO********************/
-/**************************************/
+/*Ajout d'une marge à gauche pour les titres*/
+.tuto h1,
+.resto h1 {
+  padding-left: 0.8em;
+}
+
 /**************************************/
 /***************RESTO******************/
 /**************************************/
@@ -160,107 +293,56 @@ header #logo {
       justify-content: space-around;
 }
 
-body {
-  margin: 0 auto;
-}
-
-/*font-family: 'Shrikhand', cursive;*/
-.vignette {
-  display: block;
-  border: 2px solid blueviolet;
-  border-radius: 1em;
+/**************************************/
+/**************MAIN********************/
+/**************************************/
+/*Ces classes concernent les pages menus à bouger au plus vite mec*/
+.backgroundimg {
+  height: 15rem;
   overflow: hidden;
-  margin: 1em;
-  height: 16rem;
+  width: 100%;
 }
 
-.vignette img {
-  width: 100%;
-  height: 70%;
+.backgroundimg img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
 }
 
-.container__desc {
+.mainbody {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  height: 30%;
-  background: white;
 }
 
-.container__desc h2, .container__desc h3 {
-  margin: 0;
-}
-
-.purplebutton {
-  border-radius: 500px;
-  border: 0;
-  padding: 1em;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background-image: linear-gradient(#ff79da, #9356dc);
-}
-
-.tutobouton {
+.mainmenu {
+  background: #f2f2f2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 90%;
-  height: 5em;
-}
-
-.tutobouton .buttonborder {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 90%;
-  border-radius: 25px;
-  border: 0;
-  padding: 0.1em;
-  background: #F6F6F6;
-  margin-left: -14px;
-}
-
-.tuttobouton__nmb {
-  border-radius: 50%;
-  width: 1em;
-  height: 1em;
-  padding: 0.5em;
-  border: 0;
-  background: #9356dc;
-  text-align: center;
+  border-radius: 2rem 2rem 0 0;
+  margin-top: -30px;
+  width: 100%;
 }
 
 .container__allfood {
@@ -277,55 +359,23 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 3px solid cadetblue;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 95%;
+}
+
+.container__allfood .purplebutton {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 2em;
+  margin-bottom: 4em;
 }
 
 .container__food {
-  border: 2px solid gold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0;
-  width: 90%;
-}
-
-.button {
-  border: 2px solid red;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 90%;
-  margin: 1rem;
-  background: white;
-  border-radius: 1.5em;
-  padding: 0.4em;
-}
-
-.button__info h2,
-.button__info h3 {
+  /*@include centerflex($direction : column);*/
+  width: 100%;
   margin: 0;
 }
 /*# sourceMappingURL=main.css.map */
