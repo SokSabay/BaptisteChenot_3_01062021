@@ -49,7 +49,7 @@
     @include centerflex(row-reverse);  
     justify-content: flex-end;
     width: 90%; 
-    max-width: 30em;
+    max-width: 25em;
     min-width: 20em;
     height: 5em;        
     .buttonborder {
@@ -80,3 +80,5 @@
     background: $primaryColor;
     text-align: center;
 }
+/*version tablette*/
+

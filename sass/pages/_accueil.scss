@@ -16,6 +16,15 @@ body {
         height: 70%;
         object-fit: cover;
     }
+    @media (min-width: 769px) {
+        max-width: 40em;
+    }
+}
+.container {
+    @media (min-width: 769px) {
+        @include centerflex($direction : row); 
+    
+    }
 }
 
 /*Mise en place du contenu text et icone des vignettes */
@@ -70,7 +79,11 @@ body {
 }
 .containerbutton {
     @include centerflex($direction : column);
-    justify-content: space-around;    
+    justify-content: space-around;   
+    @media (min-width: 480px) {
+        @include centerflex($direction : row);
+        flex-wrap: wrap;
+    } 
 }
 
 

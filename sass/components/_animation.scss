@@ -2,3 +2,9 @@
 /**********ANIMATION-COEUR*************/
 /**************************************/
 
+.fa-heart {
+    color: yellow;
+    &:hover {
+        color: linear-gradient($secondaryColor, $primaryColor);
+    }
+}

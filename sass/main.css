@@ -3,6 +3,7 @@
 /*Suppression du surlignage dans les liens*/
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 /*typo en blanc*/
@@ -13,6 +14,14 @@ li, button {
 /**************************************/
 /**********ANIMATION-COEUR*************/
 /**************************************/
+.fa-heart {
+  color: yellow;
+}
+
+.fa-heart:hover {
+  color: linear-gradient(#ff79da, #9356dc);
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,7 +137,7 @@ header {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 90%;
-  max-width: 30em;
+  max-width: 25em;
   min-width: 20em;
   height: 5em;
 }
@@ -176,6 +185,7 @@ header {
   text-align: center;
 }
 
+/*version tablette*/
 body {
   margin: 0 auto;
 }
@@ -200,6 +210,30 @@ body {
   height: 70%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (min-width: 769px) {
+  .vignette {
+    max-width: 40em;
+  }
+}
+
+@media (min-width: 769px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 /*Mise en place du contenu text et icone des vignettes */
@@ -293,6 +327,26 @@ body {
       justify-content: space-around;
 }
 
+@media (min-width: 480px) {
+  .containerbutton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 /**************************************/
 /**************MAIN********************/
 /**************************************/
@@ -373,9 +427,36 @@ body {
   margin-bottom: 4em;
 }
 
+@media (min-width: 769px) {
+  .container__allfood {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .container__food {
   /*@include centerflex($direction : column);*/
   width: 100%;
   margin: 0;
+}
+
+@media (min-width: 769px) {
+  .container__food {
+    margin: 1em;
+  }
 }
 /*# sourceMappingURL=main.css.map */
