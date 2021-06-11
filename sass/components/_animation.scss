@@ -1,10 +1,65 @@
 /**************************************/
 /**********ANIMATION-COEUR*************/
 /**************************************/
+.heart {
+    .coeursansbordure {
+        opacity: 0.0;
+        display: none;  
+        transition-duration: 0.3s;
+        background : transparent;
+    } 
+        &:hover {
+            transition-duration: 1s;
+            .coeurbordure {
+            display: none;  
+            } 
+            .coeursansbordure {
+                opacity: 1;
+                transition-duration: 0.1s;
+                display: block;
+                background: -webkit-gradient(linear, left top, left bottom, from($secondaryColor), to($primaryColor));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+            }
+    }
+} 
 
-.fa-heart {
-    color: yellow;
-    &:hover {
-        color: linear-gradient($secondaryColor, $primaryColor);
+
+
+/*Arrivé sur la page menu*/
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / 3;
+
+.button {
+    opacity: 0;
+    animation: boutton 1000ms forwards;
+}
+.button1 {
+    
+    animation-delay: 0.2s;
+}
+.button2 {
+
+    animation-delay: 0.4s;
+}
+.button3 {
+  
+    animation-delay: 0.6s;
+}
+.button4 {
+  
+    animation-delay: 0.8s;
+}
+@keyframes boutton {
+    0% {
+        
+        opacity: 0;
+        transform: translateY(55%);
+    }
+    100% {
+        
+        opacity: 1;
+        transform: translateY(0%);
     }
 }

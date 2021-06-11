@@ -14,12 +14,84 @@ li, button {
 /**************************************/
 /**********ANIMATION-COEUR*************/
 /**************************************/
-.fa-heart {
-  color: yellow;
+.heart .coeursansbordure {
+  opacity: 0.0;
+  display: none;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  background: transparent;
 }
 
-.fa-heart:hover {
-  color: linear-gradient(#ff79da, #9356dc);
+.heart:hover {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.heart:hover .coeurbordure {
+  display: none;
+}
+
+.heart:hover .coeursansbordure {
+  opacity: 1;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  display: block;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*Arrivé sur la page menu*/
+.button {
+  opacity: 0;
+  -webkit-animation: boutton 1000ms forwards;
+          animation: boutton 1000ms forwards;
+}
+
+.button1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.button2 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.button3 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.button4 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+@-webkit-keyframes boutton {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(55%);
+            transform: translateY(55%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes boutton {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(55%);
+            transform: translateY(55%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }
 
 footer {
@@ -187,6 +259,7 @@ header {
 
 /*version tablette*/
 body {
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -203,6 +276,7 @@ body {
   overflow: hidden;
   margin: 1em;
   height: 16rem;
+  background: white;
 }
 
 .vignette img {
@@ -255,7 +329,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 30%;
-  background: white;
   padding-left: 1em;
   padding-right: 2em;
 }
