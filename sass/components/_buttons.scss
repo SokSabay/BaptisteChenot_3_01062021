@@ -4,24 +4,38 @@
 
 /*bouton des choix dans la page de menu */
 
-
-
-
 .button {
-    border: 0;
-    @include centerflex($direction : row);
-    justify-content: space-between;
-    
-    margin : 1rem auto;
-    background: white;
-    border-radius: 1.5em;
-    padding: 0.4em;
-   
-}
+  @include centerflex($direction: row);
+  justify-content: space-between;
 
-.button__info h2, 
+  margin: 1rem auto;
+  background: white;
+  border-radius: 1.5em;
+  overflow: hidden;
+
+  height: 5em;
+  @media (min-width: 769px) {
+  }
+  .buttongreenback {
+    @include centerflex($direction: row);
+    align-self: flex-end;
+  }
+  .buttongreenback__color {
+    @include centerflex($direction: row);
+    background: rgb(145, 248, 145);
+    height: 100%;
+    width: 4em;
+  }
+}
+.button__info {
+  width: 80%;
+}
+.button__info h2,
 .button__info h3 {
-    margin: 0;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /**************************************/
@@ -30,13 +44,11 @@
 
 /*Création des boutons violets*/
 .purplebutton {
-    border-radius: 500px;
-    border : 0;
-    padding : 1em;
-    background-image: linear-gradient($secondaryColor, $primaryColor);
+  border-radius: 500px;
+  border: 0;
+  padding: 1em;
+  background-image: linear-gradient($secondaryColor, $primaryColor);
 }
-
-
 
 /**************************************/
 /**************BOUTONS TUTO************/
@@ -44,41 +56,56 @@
 
 /*Création des boutons de la page d'accueil*/
 
-
 .tutobouton {
-    @include centerflex(row-reverse);  
-    justify-content: flex-end;
-    width: 90%; 
-    max-width: 25em;
-    min-width: 20em;
-    height: 5em;        
-    .buttonborder {
-        @include centerflex(row);
-        justify-content: space-around;
-        min-width: 90%;
-        border-radius: 25px;
-        border: 0;
-        padding: 0.1em;
-        background: #F6F6F6;
-        margin-left: -20px;
-               
-        .tuttoboutton__icon {
-            margin-left: 1.5em;           
-        }
-       .tuttobouton__txt {
-        margin-right: 1.5em;
-       }
+  @include centerflex(row-reverse);
+  justify-content: center;
+  width: 90%;
+  max-width: 25em;
+  min-width: 20em;
+  height: 5em;
+  .buttonborder {
+    @include centerflex(row);
+    justify-content: space-around;
+    min-width: 90%;
+    border-radius: 25px;
+    border: 0;
+    padding: 0.1em;
+    background: #f6f6f6;
+    margin-left: -20px;
+
+    .tuttoboutton__icon {
+      margin-left: 1.5em;
     }
+    .tuttobouton__txt {
+      margin-right: 1.5em;
+    }
+  }
 }
 /*Cercle contenant le chiffre*/
 .tuttobouton__nmb {
-    border-radius: 50%;
-    width: 1em;
-    height: 1em;
-    padding: 0.5em;
-    border: 0;
-    background: $primaryColor;
-    text-align: center;
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  padding: 0.5em;
+  border: 0;
+  background: $primaryColor;
+  text-align: center;
 }
 /*version tablette*/
+/*.mainbody {
+  border : 2px solid violet;
+}
+.mainmenu {
+  border : 2px solid green;
+}
 
+.container__allfood {
+  border: 2px solid violet;
+}
+.container__food {
+  border: 2px solid green;
+}
+.button  {
+  border: 2px solid red;
+}
+*/

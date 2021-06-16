@@ -2,64 +2,126 @@
 /**********ANIMATION-COEUR*************/
 /**************************************/
 .heart {
-    .coeursansbordure {
-        opacity: 0.0;
-        display: none;  
-        transition-duration: 0.3s;
-        background : transparent;
-    } 
-        &:hover {
-            transition-duration: 1s;
-            .coeurbordure {
-            display: none;  
-            } 
-            .coeursansbordure {
-                opacity: 1;
-                transition-duration: 0.1s;
-                display: block;
-                background: -webkit-gradient(linear, left top, left bottom, from($secondaryColor), to($primaryColor));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        
-            }
+  .coeursansbordure {
+    opacity: 0;
+    display: none;
+    transition-duration: 0.3s;
+    background: transparent;
+  }
+  &:hover {
+    transition-duration: 1s;
+    .coeurbordure {
+      display: none;
     }
-} 
-
-
+    .coeursansbordure {
+      opacity: 1;
+      transition-duration: 0.1s;
+      display: block;
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from($secondaryColor),
+        to($primaryColor)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
 
 /*Arrivé sur la page menu*/
-$anim-dur: 1000ms;
-$anim-delay: $anim-dur / 3;
 
 .button {
-    opacity: 0;
-    animation: boutton 1000ms forwards;
+  opacity: 0;
+  animation: boutton 1000ms forwards;
 }
 .button1 {
-    
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .button2 {
-
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .button3 {
-  
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .button4 {
-  
-    animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 @keyframes boutton {
-    0% {
-        
-        opacity: 0;
-        transform: translateY(55%);
+  0% {
+    opacity: 0;
+    transform: translateY(55%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/**************************************/
+/**********ANIMATION-CHECK*************/
+/**************************************/
+
+.buttongreenback__color {
+  margin: -1rem -5rem -1rem 1rem;
+  transition: margin 0.2s;
+}
+
+.fa-check-circle {
+  transform: rotate(260deg);
+  transition: transform 0.6s;
+}
+
+.button {
+  &:hover {
+    .fa-check-circle {
+      transform: rotate(0deg);
+      transition: transform 0.6s;
     }
-    100% {
-        
-        opacity: 1;
-        transform: translateY(0%);
+    .buttongreenback__color {
+      margin: 0;
+      transition: margin 0.2s;
     }
+    .button__info {
+      width: 70%;
+      transform: width 0.2s;
+    }
+  }
+}
+
+
+$anim-total: 1000ms;
+$anim-delay : 200ms;
+
+.loader {
+  z-index: 1000;
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  &__balls {
+      background-color: #15DEA5;
+      height: 100%;
+      width: 100px;
+      animation: balls $anim-total backwards infinite ease-in-out alternate;
+      
+
+      @for $i from 1 through 3{
+        &--#{$i} {
+        animation-delay: $anim-delay * $i;
+      } 
+    }
+  }
+}
+
+
+@keyframes balls {
+  0%{
+    transform:scaleY(0.5) ;
+  }
+  100%{
+    transform:scaleY(1)
+  }
 }

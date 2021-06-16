@@ -15,7 +15,7 @@ li, button {
 /**********ANIMATION-COEUR*************/
 /**************************************/
 .heart .coeursansbordure {
-  opacity: 0.0;
+  opacity: 0;
   display: none;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
@@ -94,6 +94,103 @@ li, button {
   }
 }
 
+/**************************************/
+/**********ANIMATION-CHECK*************/
+/**************************************/
+.buttongreenback__color {
+  margin: -1rem -5rem -1rem 1rem;
+  -webkit-transition: margin 0.2s;
+  transition: margin 0.2s;
+}
+
+.fa-check-circle {
+  -webkit-transform: rotate(260deg);
+          transform: rotate(260deg);
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+}
+
+.button:hover .fa-check-circle {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+}
+
+.button:hover .buttongreenback__color {
+  margin: 0;
+  -webkit-transition: margin 0.2s;
+  transition: margin 0.2s;
+}
+
+.button:hover .button__info {
+  width: 70%;
+  -webkit-transform: width 0.2s;
+          transform: width 0.2s;
+}
+
+.loader {
+  z-index: 1000;
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.loader__balls {
+  background-color: #15DEA5;
+  height: 100%;
+  width: 100px;
+  -webkit-animation: balls 1000ms backwards infinite ease-in-out alternate;
+          animation: balls 1000ms backwards infinite ease-in-out alternate;
+}
+
+.loader__balls--1 {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.loader__balls--2 {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+.loader__balls--3 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+@-webkit-keyframes balls {
+  0% {
+    -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes balls {
+  0% {
+    -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,7 +244,6 @@ header {
 /**************************************/
 /*bouton des choix dans la page de menu */
 .button {
-  border: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -167,12 +263,57 @@ header {
   margin: 1rem auto;
   background: white;
   border-radius: 1.5em;
-  padding: 0.4em;
+  overflow: hidden;
+  height: 5em;
+}
+
+.button .buttongreenback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.button .buttongreenback__color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #91f891;
+  height: 100%;
+  width: 4em;
+}
+
+.button__info {
+  width: 80%;
 }
 
 .button__info h2,
 .button__info h3 {
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /**************************************/
@@ -205,9 +346,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: center;
   width: 90%;
   max-width: 25em;
   min-width: 20em;
@@ -234,7 +373,7 @@ header {
   border-radius: 25px;
   border: 0;
   padding: 0.1em;
-  background: #F6F6F6;
+  background: #f6f6f6;
   margin-left: -20px;
 }
 
@@ -258,8 +397,25 @@ header {
 }
 
 /*version tablette*/
+/*.mainbody {
+  border : 2px solid violet;
+}
+.mainmenu {
+  border : 2px solid green;
+}
+
+.container__allfood {
+  border: 2px solid violet;
+}
+.container__food {
+  border: 2px solid green;
+}
+.button  {
+  border: 2px solid red;
+}
+*/
 body {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -436,6 +592,26 @@ body {
   width: 100%;
 }
 
+.titrecoeur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+}
+
 .mainbody {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -489,7 +665,8 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 95%;
+  width: 100%;
+  margin: 1em;
 }
 
 .container__allfood .purplebutton {
@@ -525,11 +702,5 @@ body {
   /*@include centerflex($direction : column);*/
   width: 100%;
   margin: 0;
-}
-
-@media (min-width: 769px) {
-  .container__food {
-    margin: 1em;
-  }
 }
 /*# sourceMappingURL=main.css.map */

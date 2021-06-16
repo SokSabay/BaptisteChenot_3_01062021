@@ -12,7 +12,11 @@
        width: 100%;
    }
 }
-
+.titrecoeur {
+   @include centerflex($direction : row);
+   justify-content: space-between; 
+   width: 90%  ;
+}
 
 .mainbody {
    @include centerflex($direction : column); 
@@ -32,7 +36,8 @@
       
     @include centerflex($direction : column);
     align-items: flex-start;    
-    width: 95%; 
+    width: 100%;
+    margin: 1em;
     .purplebutton {
        align-self: center;
        margin-top: 2em;
@@ -40,7 +45,9 @@
       }
     @media (min-width: 769px) {
     @include centerflex($direction : row);
+    
     justify-content: space-between;
+
 
    }
 }
@@ -48,10 +55,10 @@
    /*@include centerflex($direction : column);*/
    width: 100%;
    margin: 0;
+  
    @media (min-width: 769px) {
-      margin: 1em;
+      
   }
 }
-
 
 
