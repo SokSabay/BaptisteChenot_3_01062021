@@ -89,39 +89,85 @@
     }
   }
 }
-
+/**************************************/
+/**********ANIMATION-LOAD**************/
+/**************************************/
 
 $anim-total: 1000ms;
-$anim-delay : 200ms;
+$anim-delay: 100ms;
+
+.containerloader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: caca 4s both 1;
+}
+@keyframes caca {
+  0% {
+    background-color: hsla(0, 0%, 100%, 0.9);
+  }
+  80% {
+    background-color: hsla(0, 0%, 100%, 0.9);
+  }
+  100% {
+  }
+}
 
 .loader {
-  z-index: 1000;
-  position: fixed;
+  @include centerflex($direction: row);
   width: 500px;
   height: 500px;
-  display: flex;
-  justify-content: space-evenly;
   &__balls {
-      background-color: #15DEA5;
-      height: 100%;
-      width: 100px;
-      animation: balls $anim-total backwards infinite ease-in-out alternate;
-      
+    position: fixed;
+    background-color: #15dea5;
+    height: 25px;
+    width: 25px;
 
-      @for $i from 1 through 3{
-        &--#{$i} {
+    border-radius: 50%;
+    display: inline-block;
+
+    animation: balls $anim-total both 3 ease-in-out alternate-reverse;
+
+    &--1 {
+      background-color: $tertiaryColor;
+    }
+    &--2 {
+      background-color: $primaryColor;
+    }
+    &--3 {
+      background-color: $secondaryColor;
+    }
+
+    @for $i from 1 through 3 {
+      &--#{$i} {
         animation-delay: $anim-delay * $i;
-      } 
+      }
     }
   }
 }
 
-
 @keyframes balls {
-  0%{
-    transform:scaleY(0.5) ;
+  0% {
+    transform: translateX(500%) scale(0.01) rotateY(360deg);
+    .containerloader {
+      background-color: #bbb;
+    }
   }
-  100%{
-    transform:scaleY(1)
+
+  50% {
+    transform: scale(2) rotateY(0deg);
+  }
+  100% {
+    transform: translateX(-500%) scale(0.01) rotateY(360deg);
+    .containerloader {
+      background-color: violet;
+    }
   }
 }
