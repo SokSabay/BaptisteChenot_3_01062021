@@ -103,20 +103,24 @@ $anim-delay: 100ms;
   left: 0;
   top: 0;
 
-  z-index: 10000;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: caca 4s both 1;
+  animation: caca 5s both 1;
 }
 @keyframes caca {
   0% {
     background-color: hsla(0, 0%, 100%, 0.9);
   }
-  80% {
+  50% {
     background-color: hsla(0, 0%, 100%, 0.9);
   }
+  90%{
+
+  }
   100% {
+    z-index: -100;
   }
 }
 
@@ -125,7 +129,7 @@ $anim-delay: 100ms;
   width: 500px;
   height: 500px;
   &__balls {
-    position: fixed;
+    position: absolute;
     background-color: #15dea5;
     height: 25px;
     width: 25px;

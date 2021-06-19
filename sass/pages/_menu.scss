@@ -4,61 +4,57 @@
 /*Ces classes concernent les pages menus à bouger au plus vite mec*/
 
 .backgroundimg {
-   height: 15rem;
-   overflow: hidden;
-   width: 100%;
-   img {
-       object-fit: cover;
-       width: 100%;
-   }
+  height: 15rem;
+  overflow: hidden;
+  width: 100%;
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
 }
 .titrecoeur {
-   @include centerflex($direction : row);
-   justify-content: space-between; 
-   width: 90%  ;
+  @include centerflex($direction: row);
+  justify-content: space-between;
+  width: 90%;
 }
 
 .mainbody {
-   @include centerflex($direction : column); 
+  @include centerflex($direction: column);
 }
 
+.mainmenu {
+  background: #f2f2f2;
+  @include centerflex($direction: column);
 
-.mainmenu { 
-   background: #f2f2f2;
-   @include centerflex($direction : column);
-   
-   border-radius: 2rem 2rem 0 0;
-   margin-top: -30px;
-   width: 100%;
+  border-radius: 2rem 2rem 0 0;
+  margin-top: -30px;
+  width: 100%;
+  padding-bottom: 5rem;
 }
+
 .container__allfood {
-    
-      
-    @include centerflex($direction : column);
-    align-items: flex-start;    
-    width: 100%;
-    margin: 1em;
-    .purplebutton {
-       align-self: center;
-       margin-top: 2em;
-       margin-bottom: 4em;
-      }
-    @media (min-width: 769px) {
-    @include centerflex($direction : row);
-    
-    justify-content: space-between;
+  @include centerflex($direction: column);
+  justify-content: space-around;
+
+  width: 95%;
 
 
-   }
-}
-.container__food {
-   /*@include centerflex($direction : column);*/
-   width: 100%;
-   margin: 0;
-  
-   @media (min-width: 769px) {
-      
+  .purplebutton {
+    align-self: center;
+    
+  }
+  @media (min-width: 769px) {
+    @include centerflex($direction: row);
+    flex-wrap: wrap;
+    
   }
 }
-
-
+.container__food {
+  /*@include centerflex($direction : column);*/
+  width: 95%;
+  margin: 1rem;
+  
+   max-width: 30rem;
+  @media (min-width: 769px) {
+  }
+}

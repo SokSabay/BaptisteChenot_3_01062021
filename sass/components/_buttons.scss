@@ -7,12 +7,12 @@
 .button {
   @include centerflex($direction: row);
   justify-content: space-between;
-
+padding-left: 1em;;
   margin: 1rem auto;
   background: white;
   border-radius: 1.5em;
   overflow: hidden;
-
+  
   height: 5em;
   @media (min-width: 769px) {
   }
@@ -22,9 +22,12 @@
   }
   .buttongreenback__color {
     @include centerflex($direction: row);
-    background: rgb(145, 248, 145);
+    background: $tertiaryColor;
     height: 100%;
     width: 4em;
+    i {
+      -webkit-filter: invert(100%);
+    }
   }
 }
 .button__info {
@@ -46,7 +49,7 @@
 .purplebutton {
   border-radius: 500px;
   border: 0;
-  padding: 1em;
+  padding: 1.5em 4em;
   background-image: linear-gradient($secondaryColor, $primaryColor);
 }
 

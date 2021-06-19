@@ -14,6 +14,49 @@ a {
 
 /*typo en blanc*/
 
-li, button {
+li, button, .tuttobouton__nmb {
     color  : $typoblanc;
+}
+
+/* Font page d'accueil*/
+main {
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+    }
+    h2 {
+        font-family: 'Roboto', sans-serif;
+    }
+    h3, .tuttobouton__nmb {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+    }
+    p {
+        font-family: 'Roboto', sans-serif;
+    }
+    .localisation h3, .containerbutton h3 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+    }
+}
+/*footer*/
+footer {
+    li {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        margin: 0 0 0.4em 0;
+        h2{
+            font-family: $police;
+         }   
+    }
+}
+
+/*police du bouton violet*/
+.purplebutton{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.container__allfood {
+    
 }

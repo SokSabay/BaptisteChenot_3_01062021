@@ -7,8 +7,49 @@ a {
 }
 
 /*typo en blanc*/
-li, button {
+li, button, .tuttobouton__nmb {
   color: #ffffff;
+}
+
+/* Font page d'accueil*/
+main h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+}
+
+main h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+main h3, main .tuttobouton__nmb {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+main p {
+  font-family: 'Roboto', sans-serif;
+}
+
+main .localisation h3, main .containerbutton h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+/*footer*/
+footer li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  margin: 0 0 0.4em 0;
+}
+
+footer li h2 {
+  font-family: "Shrikhand", cursive;
+}
+
+/*police du bouton violet*/
+.purplebutton {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 
 /**************************************/
@@ -142,7 +183,7 @@ li, button {
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 10000;
+  z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,18 +193,21 @@ li, button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-animation: caca 4s both 1;
-          animation: caca 4s both 1;
+  -webkit-animation: caca 5s both 1;
+          animation: caca 5s both 1;
 }
 
 @-webkit-keyframes caca {
   0% {
     background-color: rgba(255, 255, 255, 0.9);
   }
-  80% {
+  50% {
     background-color: rgba(255, 255, 255, 0.9);
   }
+  90% {
+  }
   100% {
+    z-index: -100;
   }
 }
 
@@ -171,10 +215,13 @@ li, button {
   0% {
     background-color: rgba(255, 255, 255, 0.9);
   }
-  80% {
+  50% {
     background-color: rgba(255, 255, 255, 0.9);
   }
+  90% {
+  }
   100% {
+    z-index: -100;
   }
 }
 
@@ -197,7 +244,7 @@ li, button {
 }
 
 .loader__balls {
-  position: fixed;
+  position: absolute;
   background-color: #15dea5;
   height: 25px;
   width: 25px;
@@ -344,6 +391,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-left: 1em;
   margin: 1rem auto;
   background: white;
   border-radius: 1.5em;
@@ -383,9 +431,13 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #91f891;
+  background: #99e2d0;
   height: 100%;
   width: 4em;
+}
+
+.button .buttongreenback__color i {
+  -webkit-filter: invert(100%);
 }
 
 .button__info {
@@ -407,7 +459,7 @@ header {
 .purplebutton {
   border-radius: 500px;
   border: 0;
-  padding: 1em;
+  padding: 1.5em 4em;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(#ff79da, #9356dc);
 }
@@ -501,6 +553,10 @@ header {
 body {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.tuto {
+  margin-bottom: 3em;
 }
 
 /**************************************/
@@ -607,7 +663,8 @@ body {
   justify-content: center;
   text-align: center;
   background: #f6f6f6;
-  padding-bottom: 2em;
+  padding-bottom: 4em;
+  padding: 1 2em;
 }
 
 /*Ajout d'une marge à gauche pour les titres*/
@@ -621,6 +678,8 @@ body {
 /**************************************/
 .resto {
   background: #f6f6f6;
+  padding-top: 2em;
+  padding-bottom: 3em;
 }
 
 .containerbutton {
@@ -659,6 +718,26 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+}
+
+.vignette {
+  position: relative;
+}
+
+.nouveaubutton {
+  position: absolute;
+  top: 15%;
+  left: 75%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #99e2d0;
+  color: #1c6351;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 5px;
 }
 
 /**************************************/
@@ -731,6 +810,7 @@ body {
   border-radius: 2rem 2rem 0 0;
   margin-top: -30px;
   width: 100%;
+  padding-bottom: 5rem;
 }
 
 .container__allfood {
@@ -747,19 +827,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  width: 100%;
-  margin: 1em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 95%;
 }
 
 .container__allfood .purplebutton {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin-top: 2em;
-  margin-bottom: 4em;
 }
 
 @media (min-width: 769px) {
@@ -777,15 +853,15 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
 .container__food {
   /*@include centerflex($direction : column);*/
-  width: 100%;
-  margin: 0;
+  width: 95%;
+  margin: 1rem;
+  max-width: 30rem;
 }
 /*# sourceMappingURL=main.css.map */

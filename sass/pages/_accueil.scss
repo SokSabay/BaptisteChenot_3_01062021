@@ -1,6 +1,11 @@
 body {
   max-width: 1200px;
   margin: 0 auto;
+ 
+}
+
+.tuto {
+  margin-bottom: 3em;
 }
 
 /**************************************/
@@ -58,7 +63,8 @@ body {
   justify-content: center;
   text-align: center;
   background: #f6f6f6;
-  padding-bottom: 2em;
+  padding-bottom: 4em;
+  padding: 1 2em;
 }
 
 /*Ajout d'une marge à gauche pour les titres*/
@@ -72,6 +78,8 @@ body {
 /**************************************/
 .resto {
   background: #f6f6f6;
+  padding-top: 2em;  
+  padding-bottom: 3em;
 }
 .containerbutton {
   @include centerflex($direction: column);
@@ -80,4 +88,21 @@ body {
     @include centerflex($direction: row);
     flex-wrap: wrap;
   }
+}
+.vignette {
+  position: relative;
+}
+.nouveaubutton{
+  position: absolute;
+  top: 15%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: $tertiaryColor;
+  color:  #1c6351;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 5px;
 }
