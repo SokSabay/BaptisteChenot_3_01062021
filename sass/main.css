@@ -38,18 +38,42 @@ main .localisation h3, main .containerbutton h3 {
 /*footer*/
 footer li {
   font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  margin: 0 0 0.4em 0;
+  margin: 0 0 0.6em 0;
 }
 
 footer li h2 {
   font-family: "Shrikhand", cursive;
+  font-weight: normal;
 }
 
 /*police du bouton violet*/
 .purplebutton {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+}
+
+.titrecoeur h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.container__allfood h1 {
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.container__allfood h1:before {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 1px;
+  bottom: 0;
+  border-bottom: 4px solid #99e2d0;
 }
 
 /**************************************/
@@ -395,6 +419,8 @@ footer ul li {
 
 #logo {
   font-family: "Shrikhand", cursive;
+  font-size: 20px;
+  font-weight: normal;
 }
 
 header {
@@ -603,6 +629,10 @@ header {
 body {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+main {
+  width: 100%;
 }
 
 .tuto {

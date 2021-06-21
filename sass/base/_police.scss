@@ -43,10 +43,13 @@ main {
 footer {
     li {
         font-family: 'Roboto', sans-serif;
-        font-weight: 500;
-        margin: 0 0 0.4em 0;
+        
+      
+        
+        margin: 0 0 0.6em 0;
         h2{
             font-family: $police;
+            font-weight: normal;
          }   
     }
 }
@@ -55,4 +58,33 @@ footer {
 .purplebutton{
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
+}
+.titrecoeur {
+    h1 {
+        font-family: $police;
+        font-size: 40px;
+        font-weight: normal;
+    }
+}
+
+.container__allfood {
+   
+    h1 {
+       
+        display: inline-block;
+        padding-bottom: 5px;
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 30px;
+    }
+    h1:before{
+        content: "";
+        position: absolute;
+        width: 5rem;
+        height: 1px;
+        bottom: 0;
+        border-bottom: 4px solid $tertiaryColor;
+    }
+    
 }
