@@ -64,7 +64,13 @@ body {
   text-align: center;
   background: #f6f6f6;
   padding-bottom: 4em;
-  padding: 1 2em;
+  padding: 2em;
+  h1{
+    margin-bottom: 0;
+  }
+  p{
+    margin-bottom: 2rem;
+  }
 }
 
 /*Ajout d'une marge à gauche pour les titres*/

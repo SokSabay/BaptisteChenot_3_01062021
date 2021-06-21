@@ -55,31 +55,35 @@ footer li h2 {
 /**************************************/
 /**********ANIMATION-COEUR*************/
 /**************************************/
-.heart .coeursansbordure {
-  opacity: 0;
-  display: none;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  background: transparent;
+.heart {
+  position: relative;
 }
 
-.heart:hover {
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-}
-
-.heart:hover .coeurbordure {
-  display: none;
-}
-
-.heart:hover .coeursansbordure {
-  opacity: 1;
-  -webkit-transition-duration: 0.1s;
-          transition-duration: 0.1s;
-  display: block;
+.coeursansbordure {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.heart .coeursansbordure {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.heart:hover .coeursansbordure {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 /*Arrivé sur la page menu*/
@@ -322,6 +326,45 @@ footer li h2 {
   }
 }
 
+/**************************************/
+/*********ANIMATION-TUTOBUTTON*********/
+/**************************************/
+.buttonborder {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.buttonborder:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: #ff79d926;
+}
+
+.buttonborder:hover i {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #9356dc;
+}
+
+/**************************************/
+/***********BOUTON-VIOLET**************/
+/**************************************/
+.purplebutton {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 1;
+  -webkit-box-shadow: 5px 10px 10px rgba(207, 206, 206, 0.397);
+          box-shadow: 5px 10px 10px rgba(207, 206, 206, 0.397);
+}
+
+.purplebutton:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0.8;
+  -webkit-box-shadow: 5px 10px 10px rgba(255, 255, 255, 0.397);
+          box-shadow: 5px 10px 10px rgba(255, 255, 255, 0.397);
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -344,6 +387,10 @@ footer {
 
 footer ul {
   list-style-type: none;
+}
+
+footer ul li {
+  display: block;
 }
 
 #logo {
@@ -396,6 +443,8 @@ header {
   background: white;
   border-radius: 1.5em;
   overflow: hidden;
+  -webkit-box-shadow: 5px 10px 10px rgba(207, 206, 206, 0.397);
+          box-shadow: 5px 10px 10px rgba(207, 206, 206, 0.397);
   height: 5em;
 }
 
@@ -509,8 +558,9 @@ header {
   border-radius: 25px;
   border: 0;
   padding: 0.1em;
-  background: #f6f6f6;
   margin-left: -20px;
+  -webkit-box-shadow: 5px 10px 10px rgba(207, 206, 206, 0.397);
+          box-shadow: 5px 10px 10px rgba(207, 206, 206, 0.397);
 }
 
 .tutobouton .buttonborder .tuttoboutton__icon {
@@ -664,7 +714,15 @@ body {
   text-align: center;
   background: #f6f6f6;
   padding-bottom: 4em;
-  padding: 1 2em;
+  padding: 2em;
+}
+
+.explorer h1 {
+  margin-bottom: 0;
+}
+
+.explorer p {
+  margin-bottom: 2rem;
 }
 
 /*Ajout d'une marge à gauche pour les titres*/
@@ -862,6 +920,6 @@ body {
   /*@include centerflex($direction : column);*/
   width: 95%;
   margin: 1rem;
-  max-width: 30rem;
+  max-width: 29rem;
 }
 /*# sourceMappingURL=main.css.map */

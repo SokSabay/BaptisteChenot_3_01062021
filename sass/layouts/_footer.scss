@@ -1,13 +1,16 @@
-
-
 footer {
-    @include centerflex($direction : column);
-    align-items: flex-start;
-    background : #353535;
+  @include centerflex($direction: column);
+  align-items: flex-start;
+  background: #353535;
 
-    ul {
-        
-        list-style-type: none;
+  ul {
+    list-style-type: none;
 
+    li {
+        display: block;
+        &:hover {
+
+        }
     }
+  }
 }
