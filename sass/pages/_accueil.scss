@@ -1,11 +1,8 @@
 body {
   max-width: 1200px;
   margin: 0 auto;
-
-  
 }
 main {
-
   width: 100%;
 }
 .tuto {
@@ -26,7 +23,6 @@ main {
   }
   @media (min-width: 769px) {
     max-width: 40em;
-    
   }
 }
 .column {
@@ -35,7 +31,6 @@ main {
 .container {
   @media (min-width: 769px) {
     @include centerflex($direction: row);
-  
   }
 }
 
@@ -74,17 +69,17 @@ main {
   background: #f6f6f6;
   padding-bottom: 4em;
   padding: 2em;
-  h1{
+  h2 {
     margin-bottom: 0;
   }
-  p{
+  p {
     margin-bottom: 2rem;
   }
 }
 
 /*Ajout d'une marge à gauche pour les titres*/
-.tuto h1,
-.resto h1 {
+.tuto h2,
+.resto h2 {
   padding-left: 0.8em;
 }
 
@@ -93,7 +88,7 @@ main {
 /**************************************/
 .resto {
   background: #f6f6f6;
-  padding-top: 2em;  
+  padding-top: 2em;
   padding-bottom: 3em;
 }
 .containerbutton {
@@ -107,17 +102,17 @@ main {
 .vignette {
   position: relative;
 }
-.nouveaubutton{
+.nouveaubutton {
   position: absolute;
   top: 15%;
   left: 75%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: $tertiaryColor;
-  color:  #1c6351;
+  color: #1c6351;
   font-size: 16px;
   padding: 12px 24px;
   border: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   border-radius: 5px;
 }

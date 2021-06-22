@@ -1,14 +1,12 @@
 @mixin cadre {
-    display: block;
-    border: 0;
-    box-shadow: 10px 1px 12px rgba(194, 194, 194, 0.397);
-    border-radius: 1em;
-    overflow: hidden;
-   
-    margin: 1em;
-    height: 16rem; 
+  display: block;
+  border: 0;
+  box-shadow: 10px 1px 12px rgba(194, 194, 194, 0.397);
+  border-radius: 1em;
+  overflow: hidden;
 
-    background: white;
+  margin: 1em;
+  height: 16rem;
 
-    
+  background: white;
 }

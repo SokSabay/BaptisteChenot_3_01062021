@@ -23,22 +23,18 @@
 }
 
 .heart {
-
-  
   .coeursansbordure {
-  transition: 0.3s;
-  opacity: 0;
-  transform: scale(0.5);
+    transition: 0.3s;
+    opacity: 0;
+    transform: scale(0.5);
   }
 
   &:hover {
-  
-   
     .coeursansbordure {
       transition: 0.3s;
       opacity: 1;
       transform: scale(1.2);
-      }
+    }
   }
 }
 
@@ -96,8 +92,8 @@
       transition: margin 0.2s;
     }
     .button__info {
+      transition-duration: 0.2s;
       width: 70%;
-      transform: width 0.2s;
     }
   }
 }
@@ -119,14 +115,14 @@ $anim-delay: 100ms;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: caca 5s both 1;
+  animation: backcolor 5s both 1;
 }
-@keyframes caca {
+@keyframes backcolor {
   0% {
-    background-color: hsla(0, 0%, 100%, 0.9);
+    background: hsla(0, 0%, 100%, 0.9);
   }
   50% {
-    background-color: hsla(0, 0%, 100%, 0.9);
+    background: hsla(0, 0%, 100%, 0.9);
   }
   90% {
   }
@@ -171,9 +167,6 @@ $anim-delay: 100ms;
 @keyframes balls {
   0% {
     transform: translateX(500%) scale(0.01) rotateY(360deg);
-    .containerloader {
-      background-color: #bbb;
-    }
   }
 
   50% {
@@ -181,26 +174,23 @@ $anim-delay: 100ms;
   }
   100% {
     transform: translateX(-500%) scale(0.01) rotateY(360deg);
-    .containerloader {
-      background-color: violet;
-    }
   }
 }
+
 /**************************************/
 /*********ANIMATION-TUTOBUTTON*********/
 /**************************************/
 
 .buttonborder {
   transition: 0.3s;
- 
+
   &:hover {
     transition: 0.3s;
-    background:#ff79d926;
+    background: #ff79d926;
     i {
       transition: 0.3s;
       color: $primaryColor;
     }
-    
   }
 }
 /**************************************/
@@ -212,8 +202,7 @@ $anim-delay: 100ms;
   @include shadow;
   &:hover {
     transition: 0.3s;
-   opacity: 0.8;
-   box-shadow: 5px 10px 10px rgba(255, 255, 255, 0.397);
-   
+    opacity: 0.8;
+    box-shadow: 5px 10px 10px rgba(255, 255, 255, 0.397);
   }
 }
