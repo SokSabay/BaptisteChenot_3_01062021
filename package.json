@@ -1,0 +1,21 @@
+{
+  "name": "baptistechenot_3_01062021",
+  "version": "1.0.0",
+  "description": "ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "prefix": "postcss sass/main.css --use autoprefixer -d prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SokSabay/BaptisteChenot_3_01062021.git"
+  },
+  "author": "SokSabay",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/SokSabay/BaptisteChenot_3_01062021/issues"
+  },
+  "homepage": "https://github.com/SokSabay/BaptisteChenot_3_01062021#readme"
+  
+}

@@ -26,11 +26,16 @@ main {
   }
   @media (min-width: 769px) {
     max-width: 40em;
+    
   }
+}
+.column {
+  width: 100%;
 }
 .container {
   @media (min-width: 769px) {
     @include centerflex($direction: row);
+  
   }
 }
 
