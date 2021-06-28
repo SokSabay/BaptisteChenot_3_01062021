@@ -14,8 +14,7 @@
   overflow: hidden;
   @include shadow;
   height: 5em;
-  @media (min-width: 769px) {
-  }
+
   .buttongreenback {
     @include centerflex($direction: row);
   }
@@ -39,7 +38,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
+.button__info h2 {
+  margin-bottom: 0.5em;
+}
 /**************************************/
 /************BOUTONS VIOLET************/
 /**************************************/
@@ -48,8 +49,10 @@
 .purplebutton {
   border-radius: 500px;
   border: 0;
-  padding: 1.5em 4em;
+  margin-top: 1em;
+  padding: 1em 3em;
   background-image: linear-gradient($secondaryColor, $primaryColor);
+  font-size: 18px;
 }
 
 /**************************************/
